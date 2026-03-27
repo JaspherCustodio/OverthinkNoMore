@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.OverthinkNoMore" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.OverthinkNoMore" parent="Base.Theme.OverthinkNoMore" />
+
+    <style name="Theme.App.OverThinkNoMore" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#9576EF</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/onlogo</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.OverthinkNoMore</item>
+    </style>
+</resources>
