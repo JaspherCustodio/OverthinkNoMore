@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OverthinkNoMore">
-
+        <activity
+            android:name=".ThoughtDumpActivity"
+            android:exported="false" />
         <activity
             android:name=".ForgetPasswordActivity"
             android:exported="false" />
@@ -27,6 +29,7 @@
             android:theme="@style/Base.Theme.OverthinkNoMore">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -34,4 +37,5 @@
             android:name=".MainActivity"
             android:exported="true" />
     </application>
+
 </manifest>

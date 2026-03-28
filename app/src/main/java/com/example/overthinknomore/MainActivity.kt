@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        binding?.btnThoughtDump?.setOnClickListener {
+            startActivity(Intent(this, ThoughtDumpActivity::class.java))
+        }
+
         binding?.profileSection?.setOnClickListener {
             if (auth.currentUser != null) {
                 auth.signOut()
