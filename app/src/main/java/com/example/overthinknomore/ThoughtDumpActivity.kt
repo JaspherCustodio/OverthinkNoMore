@@ -25,14 +25,7 @@ class ThoughtDumpActivity : ComponentActivity() {
         val chatViewModel = ViewModelProvider(this)[ChatViewModel::class.java]
         setContent {
             MaterialTheme {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize()
-                ) { innerPadding ->
-                    ChatPage(
-                        modifier = Modifier.padding(innerPadding),
-                        chatViewModel
-                    )
-                }
+                ChatPage(viewModel = chatViewModel)
             }
         }
 

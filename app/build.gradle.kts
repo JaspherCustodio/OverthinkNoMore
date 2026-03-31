@@ -47,6 +47,7 @@ android {
 
 dependencies {
     implementation(platform("com.google.firebase:firebase-bom:34.11.0"))
+    implementation("com.google.firebase:firebase-ai")
     implementation("com.google.firebase:firebase-auth")
     implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
 

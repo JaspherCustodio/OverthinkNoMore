@@ -3,6 +3,7 @@ package com.example.overthinknomore
 import android.content.Intent
 import androidx.credentials.CredentialManager
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -37,7 +38,6 @@ class SignInActivity : BaseActivity() {
 
         binding?.tvSignUp?.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
-            finish()
         }
 
         binding?.tvForgotPassword?.setOnClickListener {
@@ -47,6 +47,12 @@ class SignInActivity : BaseActivity() {
         binding?.btnSignIn?.setOnClickListener { signInUser() }
 
         binding?.btnGoogle?.setOnClickListener { signInWithGoogle() }
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                finish()
+            }
+        })
     }
 
     private fun signInUser() {

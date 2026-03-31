@@ -3,6 +3,7 @@ package com.example.overthinknomore
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import com.example.overthinknomore.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -28,6 +29,12 @@ class SignUpActivity : BaseActivity() {
         }
 
         binding?.btnSignUp?.setOnClickListener { signUpUser() }
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                finish()
+            }
+        })
     }
 
     private fun signUpUser() {
