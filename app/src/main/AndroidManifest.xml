@@ -12,9 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OverthinkNoMore">
         <activity
-            android:name=".ThoughtDumpActivity"
-            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:name=".MoodTrackerActivity"
             android:exported="false" />
+        <activity
+            android:name=".ResourcesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CopingToolsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThoughtDumpActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
             android:name=".ForgetPasswordActivity"
             android:exported="false" />

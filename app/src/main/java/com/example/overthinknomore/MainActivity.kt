@@ -27,6 +27,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ThoughtDumpActivity::class.java))
         }
 
+        binding?.btnMoodTracker?.setOnClickListener {
+            startActivity(Intent(this, MoodTrackerActivity::class.java))
+        }
+
+        binding?.btnCopingTools?.setOnClickListener {
+            startActivity(Intent(this, CopingToolsActivity::class.java))
+        }
+
+        binding?.btnResources?.setOnClickListener {
+            startActivity(Intent(this, ResourcesActivity::class.java))
+        }
+
         binding?.profileSection?.setOnClickListener {
             if (auth.currentUser != null) {
                 auth.signOut()

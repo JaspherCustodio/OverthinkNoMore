@@ -47,7 +47,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import com.google.firebase.ai.type.content
 
 @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
 @Composable
