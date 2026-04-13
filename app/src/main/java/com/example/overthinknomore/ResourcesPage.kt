@@ -31,16 +31,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
 fun ResourcesPage() {
-
-        val context = LocalContext.current
-        var showAboutDialog by remember { mutableStateOf(false) }
-        val resources = listOf(
-        ResourcesModel(
+    val context = LocalContext.current
+    var showAboutDialog by remember { mutableStateOf(false) }
+    val resources = listOf(
+        NavigationModel(
             title = "Emergency Hotline",
             desc = "Immediate support (0919-057-1553)",
             icon = "📞",
@@ -48,27 +48,27 @@ fun ResourcesPage() {
             type = MyResourceType.EMERGENCY,
             customColor = Color(0xFFFFEBEE)
         ),
-        ResourcesModel(
+        NavigationModel(
             title = "4-7-8 Breathing",
             desc = "Guided relaxation technique",
             icon = "🧘",
             action = "https://www.healthline.com/health/4-7-8-breathing"
         ),
-        ResourcesModel(
+        NavigationModel(
             title = "Box Breathing",
             desc = "Reset your nervous system",
             icon = "📦",
             action = "https://www.webmd.com/balance/what-is-box-breathing",
             type = MyResourceType.REGULAR
         ),
-        ResourcesModel(
+        NavigationModel(
             title = "5-4-3-2-1 Grounding",
             desc = "Engage your senses to stay present",
             icon = "🛡️",
             action = "https://www.medicalnewstoday.com/articles/5-4-3-2-1-grounding-technique",
             type = MyResourceType.REGULAR
         ),
-        ResourcesModel(
+        NavigationModel(
             title = "About Us",
             desc = "Learn about OverthinkNoMore",
             icon = "🌿",
@@ -140,9 +140,9 @@ fun ResourcesPage() {
                 text = {
                     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                         Text(
-                            text = "OverthinkNoMore is a digital sanctuary developed at East Systems Colleges of Rizal (ESCR) 🇵🇭. " +
-                                    "Our mission is to provide immediate, empathetic support for those moments when your mind feels too loud. " +
-                                    "We believe that everyone deserves a safe space to navigate their thoughts without judgment. " +
+                            text = "\t\t\t\t\tOverthinkNoMore is developed at East Systems Colleges of Rizal (ESCR) 🇵🇭. " +
+                                    "\nOur mission is to provide immediate, empathetic support for those moments when your mind feels too loud. \n" +
+                                    "\t\t\t\t\tWe believe that everyone deserves a safe space to navigate their thoughts without judgment. " +
                                     "By bridging the gap between innovative technology and mental wellbeing, we help you quiet the noise, " +
                                     "rediscover your inner peace, and move forward—one breath at a time.",
                             style = MaterialTheme.typography.bodyMedium,
@@ -181,10 +181,9 @@ fun ResourcesPage() {
     }
 }
 
-data class ResourceItem(val title: String, val desc: String, val icon: String)
 
 @Composable
-fun ResourceCard(item: ResourcesModel, onClick: () -> Unit) {
+fun ResourceCard(item: NavigationModel, onClick: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()

@@ -48,6 +48,7 @@ import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 
+
 @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
 @Composable
 fun ChatPage(modifier: Modifier = Modifier, viewModel: ChatViewModel) {
@@ -72,7 +73,7 @@ fun AppHeader() {
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.primary)
-            .height(80.dp),
+            .statusBarsPadding(),
         contentAlignment = Alignment.CenterStart
     ) {
         Text(
@@ -87,9 +88,7 @@ fun AppHeader() {
             style = MaterialTheme.typography.headlineMedium.copy(lineHeight = 28.sp),
             fontWeight = FontWeight.Bold,
             modifier = Modifier
-                .padding(start = 14.dp)
-                .padding(top = 32.dp)
-
+                .padding(20.dp)
         )
     }
 }

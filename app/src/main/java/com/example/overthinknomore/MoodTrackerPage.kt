@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -34,6 +35,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.view.ViewCompat
@@ -57,6 +59,7 @@ fun MoodTrackerPage(onMoodSaved: (String, String) -> Unit) {
             .fillMaxSize()
             .background(Color(0xFF9576EF))
             .statusBarsPadding()
+            .navigationBarsPadding()
     ) {
         Text(
             text = "Mood Tracker",
@@ -69,7 +72,9 @@ fun MoodTrackerPage(onMoodSaved: (String, String) -> Unit) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(20.dp)
+                .padding(start = 20.dp)
+                .padding(end = 20.dp)
+                .padding(bottom = 20.dp)
                 .clip(RoundedCornerShape(16.dp))
                 .background(Color.White)
                 .padding(20.dp),
@@ -82,7 +87,7 @@ fun MoodTrackerPage(onMoodSaved: (String, String) -> Unit) {
                 color = Color.Black
             )
 
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -103,7 +108,7 @@ fun MoodTrackerPage(onMoodSaved: (String, String) -> Unit) {
                 }
             }
 
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(5.dp))
 
             OutlinedTextField(
                 value = note,

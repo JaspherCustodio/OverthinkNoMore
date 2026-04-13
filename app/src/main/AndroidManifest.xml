@@ -21,6 +21,9 @@
             android:name=".CopingToolsActivity"
             android:exported="false" />
         <activity
+            android:name=".AffirmationActivity"
+            android:exported="false" />
+        <activity
             android:name=".ThoughtDumpActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize|stateHidden" />

@@ -10,7 +10,7 @@ enum class MyResourceType {
 }
 
 // 2. Data class with default values
-data class ResourcesModel(
+data class NavigationModel(
     val title: String,
     val desc: String,
     val icon: String,
