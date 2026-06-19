@@ -5,16 +5,16 @@ plugins {
 }
 
 android {
-    namespace = "com.example.overthinknomore"
+    namespace = ""
     compileSdk {
-        version = release(36) {
+        version = release() {
             minorApiLevel = 1
         }
     }
 
     defaultConfig {
-        applicationId = "com.example.overthinknomore"
-        minSdk = 24
+        applicationId = ""
+        minSdk = 0
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
