@@ -1,4 +1,4 @@
-# 🧠 Over Think No More
+# 🧠 OverThinkNoMore
 
 A mental wellness Android application designed to help users manage overthinking, track emotions, and practice healthy coping strategies.
 
